@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Francisco Hélio Conde dos Santos | Desenvolvedor Front-End</title>
+    <title>Portfolio | Francisco Hélio Conde dos Santos</title>
     <link rel="stylesheet" href="css/style2.css">
     <script src="js/jquery-3.6.0.min.js"></script>
 </head>
@@ -103,10 +103,49 @@
         <div></div>
     </nav>
     <main>
-        
+        <div class="logoFront html5">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="logoFront css">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="logoFront javaScript">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </main>
 
 </body>
 <script src="js/navBar.js"></script>
+<script>
+    var poly = ['78% 18%', '77% 30%', '35% 30%', '36% 41%', '76% 41%', '73% 76%', '50% 82%', '27% 75%', '25% 57%', '37% 57%', '38% 66%', '50% 69%', '62% 66%', '63% 52%', '25% 52%', '22% 18%']
+    i = 0;
+    draw()
+    function draw() {
+        if (poly.length == i) {
+
+        } else {
+            if ($("#html5 span:nth-child(3)").css('clip-path').slice(8, 999).slice(0, -1) == '') {
+                $("#html5 span:nth-child(3)").css({
+                    'clip-path': 'polygon(' + poly[i] + ')'
+                })
+            } else {
+                $("#html5 span:nth-child(3)").animate({
+                    'clip-path': 'polygon(' + $("#html5 span:nth-child(3)").css('clip-path').slice(8, 999).slice(0, -1) + ',' + poly[i] + ')'
+                })
+            }
+            i++;
+            setTimeout(() => {
+                draw()
+            }, 500);
+        }
+    }
+
+</script>
 
 </html>
