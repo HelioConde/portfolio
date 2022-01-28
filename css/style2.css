@@ -341,7 +341,7 @@ nav:hover .null_box2 span {
 }
 
 main {
-    display: inline-block;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     border: 2px dashed white;
@@ -354,6 +354,7 @@ main {
     cursor: default;
     height: 88vh;
     z-index: -1;
+    text-align: center;
 }
 
 @font-face {
@@ -366,10 +367,13 @@ main {
     width: 300px;
     height: 300px;
     position: relative;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Poppins Bold';
 }
 
-.logoFront span:nth-child(1) {
-    top: 0;
+.logoFront span:nth-child(2) {
+    top: 50px;
     left: 0;
     position: absolute;
     display: inline-block;
@@ -380,8 +384,8 @@ main {
 }
 
 
-.logoFront span:nth-child(2) {
-    top: 0;
+.logoFront span:nth-child(3) {
+    top: 50px;
     left: 0;
     position: absolute;
     display: inline-block;
@@ -391,8 +395,8 @@ main {
     clip-path: polygon(50% 7%, 50% 92%, 79% 84%, 86% 7%);
 }
 
-.html5 span:nth-child(3) {
-    top: 0;
+.html5 span:nth-child(4) {
+    top: 50px;
     left: 0;
     position: absolute;
     display: inline-block;
@@ -466,16 +470,25 @@ main {
 
 }
 
-.css span:nth-child(1) {
-    background: #105EAA;
+.css div div {
+    display: inline-block;
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
 }
 
 .css span:nth-child(2) {
-    background: #2B99D5;
+    background: #105EAA;
 }
 
 .css span:nth-child(3) {
-    top: 0;
+    background: #2B99D5;
+}
+
+.css span:nth-child(4) {
+    top: 50px;
     left: 0;
     position: absolute;
     display: inline-block;
@@ -546,16 +559,25 @@ main {
 
 }
 
-.javaScript span:nth-child(1) {
-    background: #DE921E;
+.javaScript div div {
+    display: inline-block;
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
 }
 
 .javaScript span:nth-child(2) {
-    background: #EDB31C;
+    background: #DE921E;
 }
 
 .javaScript span:nth-child(3) {
-    top: 0;
+    background: #EDB31C;
+}
+
+.javaScript span:nth-child(4) {
+    top: 50px;
     left: 0;
     position: absolute;
     display: inline-block;
