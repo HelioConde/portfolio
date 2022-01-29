@@ -267,12 +267,13 @@ function chevronBar() {
                 'left': '12%'
             }, 300);
         } else if (setBar == 2) {
-            $('main').animate({
-                'left': '250px'
-            }, 300);
+
             $('main').css({
                 'width': '77%'
             });
+            $('main').animate({
+                'left': '250px'
+            }, 300);
         } else if (setBar == 3) {
             $('main').css({
                 'right': '12%'

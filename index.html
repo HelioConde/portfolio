@@ -103,6 +103,19 @@
         <div></div>
     </nav>
     <main>
+        <div class="page1 grid1">
+            <div>
+                <div>Francisco Hélio Conde</div>
+                <div>Front-End Developer</div>
+            </div>
+            <div>
+                <div><img src="img/helioConde.png" class="page1Img" alt=""></div>
+            </div>
+            <div>
+                <div>Vamos trabalhar juntos?</div>
+                <div><button class="button">Projetos</button><button class="button">Contatos</button></div>
+            </div>
+        </div>
         <div class="logoFront html5">
             <div>HTML</div>
             <span></span>
@@ -110,42 +123,94 @@
             <span></span>
         </div>
         <div class="logoFront css">
-            <div>C<div>ZZ</div></div>
+            <div>C<div>ZZ</div>
+            </div>
             <span></span>
             <span></span>
             <span></span>
         </div>
         <div class="logoFront javaScript">
-            <div>C<div>Z</div></div>
+            <div>J<div>Z</div>
+            </div>
             <span></span>
             <span></span>
             <span></span>
+        </div>
+        <div class="logoFront frontEnd">
+            <div>Front End</div>
+            <span></span>
+            <span></span>
+            <span></span>
+            <div><img src="./img/logoft.png" alt=""></div>
         </div>
     </main>
 
 </body>
 <script src="js/navBar.js"></script>
 <script>
-    var poly = ['78% 18%', '77% 30%', '35% 30%', '36% 41%', '76% 41%', '73% 76%', '50% 82%', '27% 75%', '25% 57%', '37% 57%', '38% 66%', '50% 69%', '62% 66%', '63% 52%', '25% 52%', '22% 18%']
-    i = 0;
-    draw()
-    function draw() {
-        if (poly.length == i) {
-
-        } else {
-            if ($("#html5 span:nth-child(3)").css('clip-path').slice(8, 999).slice(0, -1) == '') {
-                $("#html5 span:nth-child(3)").css({
-                    'clip-path': 'polygon(' + poly[i] + ')'
-                })
-            } else {
-                $("#html5 span:nth-child(3)").animate({
-                    'clip-path': 'polygon(' + $("#html5 span:nth-child(3)").css('clip-path').slice(8, 999).slice(0, -1) + ',' + poly[i] + ')'
-                })
-            }
-            i++;
+    let carr = 0;
+    carrosel()
+    function carrosel() {
+        if (carr == 0) {
+            $(".page1").css('display', 'grid');
+            $(".page1").animate({ opacity: 1 }, 2000);
             setTimeout(() => {
-                draw()
-            }, 500);
+                $(".page1").fadeOut(2000);
+                $(".page1").css({ opacity: 0 });
+                setTimeout(() => {
+                    carr++;
+                    carrosel();
+                }, 2500);
+            }, 8000);
+        } else if (carr == 1) {
+            $(".html5").fadeIn(2000);
+            setTimeout(() => {
+                $(".html5").fadeOut(2000);
+                setTimeout(() => {
+                    carr++;
+                    carrosel();
+                }, 2500);
+            }, 3000);
+        } else if (carr == 2) {
+            $(".css").fadeIn(2000);
+            setTimeout(() => {
+                $(".css").fadeOut(2000);
+                setTimeout(() => {
+                    carr++;
+                    carrosel();
+                }, 2500);
+            }, 3000);
+        } else if (carr == 3) {
+            $(".javaScript").fadeIn(2000);
+            setTimeout(() => {
+                $(".javaScript").fadeOut(2000);
+                setTimeout(() => {
+                    carr++;
+                    carrosel();
+                }, 2500);
+            }, 3000);
+        } else if (carr == 4) {
+            $(".html5").fadeIn(2000);
+            $(".css").fadeIn(2000);
+            $(".javaScript").fadeIn(2000);
+            setTimeout(() => {
+                $(".html5").fadeOut(2000);
+                $(".css").fadeOut(2000);
+                $(".javaScript").fadeOut(2000);
+                setTimeout(() => {
+                    carr++;
+                    carrosel();
+                }, 2500);
+            }, 3000);
+        } else if (carr == 5) {
+            $(".frontEnd").fadeIn(2000);
+            setTimeout(() => {
+                $(".frontEnd").fadeOut(2000);
+                setTimeout(() => {
+                    carr = 0;
+                    carrosel();
+                }, 2500);
+            }, 3000);
         }
     }
 

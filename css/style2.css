@@ -21,7 +21,7 @@ body {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 1px 4px 0px white;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.9);
     width: 100%;
     transition: border 0.5s ease;
     transition: width 0.5s ease;
@@ -167,7 +167,7 @@ nav:hover .null_box2 span {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 1px 4px 0px white;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.9);
     width: 80px;
     transition: border 0.5s ease;
     transition: width 0.5s ease;
@@ -348,6 +348,8 @@ main {
     background: rgba(0, 0, 0, 0.4);
     transition: border 0.5s ease;
     transition: width 0.5s ease;
+    transition: left 0.5s ease;
+    transition: margin 0.5s ease;
     color: white;
     border-radius: 15px;
     position: fixed;
@@ -362,14 +364,40 @@ main {
     src: url(../font/Poppins-SemiBold.ttf);
 }
 
-.logoFront {
+.page1 {
     display: inline-block;
-    width: 300px;
-    height: 300px;
     position: relative;
     text-align: center;
     font-size: 30px;
     font-family: 'Poppins Bold';
+}
+
+.grid1 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+    width: 100%;
+    align-items: center;
+    display: none;
+    opacity: 0;
+}
+
+.page1Img {
+    width: 300px;
+    border-radius: 200px;
+    box-shadow: 0px 0px 10px black;
+}
+
+.logoFront {
+    display: inline-block;
+    width: 300px;
+    height: 350px;
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Poppins Bold';
+    margin: auto;
 }
 
 .logoFront span:nth-child(2) {
@@ -381,6 +409,7 @@ main {
     height: 300px;
     background: #DD391C;
     clip-path: polygon(6% 0%, 14% 90%, 50% 100%, 86% 90%, 94% 0%);
+    display: none;
 }
 
 
@@ -393,6 +422,11 @@ main {
     height: 300px;
     background: #EB5022;
     clip-path: polygon(50% 7%, 50% 92%, 79% 84%, 86% 7%);
+    display: none;
+}
+
+.html5 {
+    display: none;
 }
 
 .html5 span:nth-child(4) {
@@ -468,6 +502,10 @@ main {
         clip-path: polygon(78% 18%, 77% 30%, 35% 30%, 36% 41%, 76% 41%, 73% 76%, 50% 82%, 27% 75%, 25% 57%, 37% 57%, 38% 66%, 50% 69%, 62% 66%, 63% 52%, 25% 52%, 22% 18%);
     }
 
+}
+
+.css {
+    display: none;
 }
 
 .css div div {
@@ -557,6 +595,10 @@ main {
         clip-path: polygon(21% 19%, 22% 30%, 50% 30%, 22% 41%, 24% 52%, 63% 52%, 62% 66%, 50% 69%, 37% 66%, 36% 58%, 25% 58%, 26% 75%, 50% 82%, 72% 75%, 75% 41%, 50% 41%, 78% 30%, 78% 19%);
     }
 
+}
+
+.javaScript {
+    display: none;
 }
 
 .javaScript div div {
@@ -661,8 +703,49 @@ main {
 
 }
 
-.javaScript div img {
-    width: 270px;
-    height: 304px;
-    margin-left: 5%;
+.frontEnd div img {
+    width: 269px;
+    height: 305px;
+    margin-left: 1%;
+}
+
+
+.button {
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    transition: .3s;
+    border: 2px solid;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3rem;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.frontEnd {
+    display: none;
+}
+
+.frontEnd span:nth-child(2) {
+    background: #323330;
+}
+
+.frontEnd span:nth-child(3) {
+    background: #6c6e68;
+}
+
+.frontEnd span:nth-child(4) {
+    top: 50px;
+    left: 0;
+    position: absolute;
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    background: black;
+    clip-path: polygon(51% 11%, 47% 25%, 32% 25%, 33% 38%, 44% 38%, 40% 52%, 34% 52%, 36% 70%, 32% 83%, 22% 81%, 16% 11%);
+    transition: clip-path 1s;
+    /*animation: javaScriptAnim 3s;*/
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
 }
