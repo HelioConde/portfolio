@@ -141,78 +141,84 @@
             <span></span>
             <span></span>
             <span></span>
-            <div><img src="./img/logoft.png" alt=""></div>
+            <span></span>
         </div>
     </main>
 
 </body>
 <script src="js/navBar.js"></script>
 <script>
-    let carr = 0;
-    carrosel()
-    function carrosel() {
-        if (carr == 0) {
-            $(".page1").css('display', 'grid');
-            $(".page1").animate({ opacity: 1 }, 2000);
-            setTimeout(() => {
-                $(".page1").fadeOut(2000);
-                $(".page1").css({ opacity: 0 });
-                setTimeout(() => {
-                    carr++;
-                    carrosel();
-                }, 2500);
-            }, 8000);
-        } else if (carr == 1) {
-            $(".html5").fadeIn(2000);
-            setTimeout(() => {
-                $(".html5").fadeOut(2000);
-                setTimeout(() => {
-                    carr++;
-                    carrosel();
-                }, 2500);
-            }, 3000);
-        } else if (carr == 2) {
-            $(".css").fadeIn(2000);
-            setTimeout(() => {
-                $(".css").fadeOut(2000);
-                setTimeout(() => {
-                    carr++;
-                    carrosel();
-                }, 2500);
-            }, 3000);
-        } else if (carr == 3) {
-            $(".javaScript").fadeIn(2000);
-            setTimeout(() => {
-                $(".javaScript").fadeOut(2000);
-                setTimeout(() => {
-                    carr++;
-                    carrosel();
-                }, 2500);
-            }, 3000);
-        } else if (carr == 4) {
-            $(".html5").fadeIn(2000);
-            $(".css").fadeIn(2000);
-            $(".javaScript").fadeIn(2000);
-            setTimeout(() => {
-                $(".html5").fadeOut(2000);
-                $(".css").fadeOut(2000);
-                $(".javaScript").fadeOut(2000);
-                setTimeout(() => {
-                    carr++;
-                    carrosel();
-                }, 2500);
-            }, 3000);
-        } else if (carr == 5) {
-            $(".frontEnd").fadeIn(2000);
-            setTimeout(() => {
-                $(".frontEnd").fadeOut(2000);
-                setTimeout(() => {
-                    carr = 0;
-                    carrosel();
-                }, 2500);
-            }, 3000);
+    let count = 0;
+    var blur = true;
+
+    ms = 30; // 1000 ?
+    num = 1;
+    start = new Date();
+    log = 6000;
+
+    function test2() {
+        num += ms;
+        if (num < log) {
+            console.log(new Date() - start2);
+            window.setTimeout(test2, ms);
+        } else {
+            log = log + 6000;
+            console.log(new Date() - start2);
+            countDown();
         }
     }
+
+    countDown();
+
+    function countDown() {
+        if (blur == true) {
+            blur = false
+            if (count == 0) {
+                $(".grid1").css({ display: 'grid' }, 2000);
+                $(".grid1").animate({ opacity: '1' }, 2000);
+                count++;
+            } else if (count == 1) {
+                $(".html5").fadeIn(2000);
+                count++;
+            } else if (count == 2) {
+                $(".css").fadeIn(2000);
+                count++;
+            } else if (count == 3) {
+                $(".javaScript").fadeIn(2000);
+                count++;
+            } else if (count == 4) {
+                $(".frontEnd").fadeIn(2000);
+                count = 0;
+            }
+            start2 = new Date();
+            dueTo = new Date(+new Date() + 6000);
+            ms2 = 30; // 1000 ?
+            num2 = 1;
+            test2();
+            setTimeout(() => {
+                clear();
+            }, 4000);
+        }
+    }
+
+    function clear() {
+        $(".grid1").fadeOut(2000);
+        $(".grid1").animate({ opacity: '0' }, 2000);
+        $(".html5").fadeOut(2000);
+        $(".css").fadeOut(2000);
+        $(".javaScript").fadeOut(2000);
+        $(".frontEnd").fadeOut(2000);
+        blur = true;
+    }
+
+    function clear2() {
+        $(".grid1").fadeOut(0);
+        $(".html5").fadeOut(0);
+        $(".css").fadeOut(0);
+        $(".javaScript").fadeOut(0);
+        $(".frontEnd").fadeOut(0);
+    }
+
 
 </script>
 
