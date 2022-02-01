@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Francisco Hélio Conde dos Santos</title>
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/logos.css">
     <script src="js/jquery-3.6.0.min.js"></script>
 </head>
 
@@ -24,13 +25,13 @@
                     <span onmouseup="nav('home')">Início</span>
                 </li>
                 <li>
-                    <span onmouseup="nav('acesso')">Home1</span>
+                    <span onmouseup="nav('acesso')">Sobre</span>
                 </li>
                 <li>
-                    <span onmouseup="nav('contato')">Home2</span>
+                    <span onmouseup="nav('contato')">Projetos</span>
                 </li>
                 <li>
-                    <span onmouseup="nav('sobre')">Home3</span>
+                    <span onmouseup="nav('sobre')">Contato</span>
                 </li>
             </ul>
         </div>
@@ -56,7 +57,7 @@
                         <span onmouseup="nav('home')"><i class="home_solid"></i></span>
                     </div>
                     <div class="bar1">
-                        HOME1
+                        Início
                     </div>
                 </li>
                 <li>
@@ -64,7 +65,7 @@
                         <span onmouseup="nav('home')"><i class="home_solid"></i></span>
                     </div>
                     <div class="bar1">
-                        HOME11
+                        Sobre
                     </div>
                 </li>
                 <li>
@@ -72,7 +73,7 @@
                         <span onmouseup="nav('home')"><i class="home_solid"></i></span>
                     </div>
                     <div class="bar1">
-                        HOME111
+                        Projetos
                     </div>
                 </li>
                 <li>
@@ -80,7 +81,7 @@
                         <span onmouseup="nav('home')"><i class="home_solid"></i></span>
                     </div>
                     <div class="bar1">
-                        HOME1111
+                        Contato
                     </div>
                 </li>
             </ul>
@@ -103,123 +104,61 @@
         <div></div>
     </nav>
     <main>
-        <div class="page1 grid1">
-            <div>
-                <div>Francisco Hélio Conde</div>
-                <div>Front-End Developer</div>
+        <div id="home">
+            <div id="barLeft">
+                <i class="angle_right"></i>
             </div>
-            <div>
-                <div><img src="img/helioConde.png" class="page1Img" alt=""></div>
-            </div>
-            <div>
+            <div class="page1 grid1">
+
+                    <div>Hélio Conde</div>
+                    <div>Front-End Developer</div>
+
+                <div>
+                    <div><img src="img/helioConde.png" class="page1Img" alt=""></div>
+                </div>
+
                 <div>Vamos trabalhar juntos?</div>
                 <div><button class="button">Projetos</button><button class="button">Contatos</button></div>
+
+            </div>
+            <div class="logoFront html5">
+                <div>HTML</div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="logoFront css">
+                <div>C<div>ZZ</div>
+                </div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="logoFront javaScript">
+                <div>J<div>Z</div>
+                </div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="logoFront frontEnd">
+                <div>Front End</div>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="barRight">
+                <i class="angle_right"></i>
             </div>
         </div>
-        <div class="logoFront html5">
-            <div>HTML</div>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="logoFront css">
-            <div>C<div>ZZ</div>
-            </div>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="logoFront javaScript">
-            <div>J<div>Z</div>
-            </div>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="logoFront frontEnd">
-            <div>Front End</div>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+        <div id="sobre">
+
         </div>
     </main>
 
 </body>
 <script src="js/navBar.js"></script>
-<script>
-    let count = 0;
-    var blur = true;
-
-    ms = 30; // 1000 ?
-    num = 1;
-    start = new Date();
-    log = 6000;
-
-    function test2() {
-        num += ms;
-        if (num < log) {
-            console.log(new Date() - start2);
-            window.setTimeout(test2, ms);
-        } else {
-            log = log + 6000;
-            console.log(new Date() - start2);
-            countDown();
-        }
-    }
-
-    countDown();
-
-    function countDown() {
-        if (blur == true) {
-            blur = false
-            if (count == 0) {
-                $(".grid1").css({ display: 'grid' }, 2000);
-                $(".grid1").animate({ opacity: '1' }, 2000);
-                count++;
-            } else if (count == 1) {
-                $(".html5").fadeIn(2000);
-                count++;
-            } else if (count == 2) {
-                $(".css").fadeIn(2000);
-                count++;
-            } else if (count == 3) {
-                $(".javaScript").fadeIn(2000);
-                count++;
-            } else if (count == 4) {
-                $(".frontEnd").fadeIn(2000);
-                count = 0;
-            }
-            start2 = new Date();
-            dueTo = new Date(+new Date() + 6000);
-            ms2 = 30; // 1000 ?
-            num2 = 1;
-            test2();
-            setTimeout(() => {
-                clear();
-            }, 4000);
-        }
-    }
-
-    function clear() {
-        $(".grid1").fadeOut(2000);
-        $(".grid1").animate({ opacity: '0' }, 2000);
-        $(".html5").fadeOut(2000);
-        $(".css").fadeOut(2000);
-        $(".javaScript").fadeOut(2000);
-        $(".frontEnd").fadeOut(2000);
-        blur = true;
-    }
-
-    function clear2() {
-        $(".grid1").fadeOut(0);
-        $(".html5").fadeOut(0);
-        $(".css").fadeOut(0);
-        $(".javaScript").fadeOut(0);
-        $(".frontEnd").fadeOut(0);
-    }
-
-
-</script>
+<script src="js/carrosel.js"></script>
 
 </html>

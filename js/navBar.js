@@ -69,93 +69,66 @@ function navSet(valor) {
     nav2 = true;
     chevronBar();
     console.log(valor);
-    if (valor <= 4) {
-        navOn = 1;
-        $("#nav2").css('display', 'inline-block')
-        if (valor == 1 || valor == 3) {
-            $("#nav2").css({
-                'height': '70vh',
-                'width': '70px',
-                'top': '50%',
-                'transform': 'translate(0, -50%)',
-                'border-radius': '15px'
-            })
-        } else {
-            $("#nav2").css({
-                'height': '100vh',
-                'width': '70px',
-                'top': '50%',
-                'transform': 'translate(0, -50%)',
-                'border-radius': '0'
-            })
-        }
-        if (valor == 1 || valor == 2) {
-            $("#nav2").css({
-                'left': $("#nav3 div:nth-child(" + valor + ")").css('left')
-            })
-            $('#chevron2').css({
-                'right': '',
-                'left': '53px',
-                'transform': 'scaleX(-1)'
-            });
-            $('.bar2, .bar1').css({
-                'text-align': 'left',
-                'float': 'left',
-                'margin-left': '15px'
-            });
-            barPostion = 'left';
-        } else {
-            $("#nav2").css({
-                'left': '',
-                'right': $("#nav3 div:nth-child(" + valor + ")").css('right')
-            })
-            $('#chevron2').css({
-                'left': '',
-                'right': '53px',
-                'transform': 'scaleX(1)'
-            });
-            $('.bar2, .bar1').css({
-                'text-align': 'right',
-                'float': 'right',
-                'margin-right': '15px'
-            });
-            barPostion = 'right';
-        }
-    } else {
-        navOn = 0;
-        if (valor >= 7) {
-            $("#nav").css({
-                'top': $("#nav3 div:nth-child(" + valor + ")").offset().top + 'px',
-                'left': '50%',
-                'right': '50%',
-                'width': '99.7%',
-                'transform': 'translate(-50%, 0%)',
-                'border-radius': '0'
-            })
-        } else {
-            $("#nav").css({
-                'top': $("#nav3 div:nth-child(" + valor + ")").offset().top + 'px',
-                'left': '50%',
-                'right': '50%',
-                'width': '70%',
-                'transform': 'translate(-50%, 0%)',
-                'border-radius': '15px'
-            })
-        }
-    }
-    console.log(valor)
+    $(".grid1").css('padding', '0%')
     if (valor == 1) {
+        $("#nav2").css('display', 'inline-block')
+        navOn = 1;
+        $("#nav2").css({
+            'height': '70vh',
+            'width': '70px',
+            'top': '50%',
+            'transform': 'translate(0, -50%)',
+            'border-radius': '15px'
+        })
+        $("#nav2").css({
+            'left': '7%'
+        })
+        $('#chevron2').css({
+            'right': '',
+            'left': '53px',
+            'transform': 'scaleX(-1)'
+        });
+        $('.bar2, .bar1').css({
+            'text-align': 'left',
+            'float': 'left',
+            'margin-left': '15px'
+        });
+        barPostion = 'left';
+
         $('main').css({
             'bottom': '',
             'top': '50%',
             'margin': 'auto',
             'width': '87%',
             'height': '88vh',
-            'left': '0%',
+            'left': '12%',
             'right': '0px',
             'transform': 'translate(0, -50%)'
         });
     } else if (valor == 2) {
+        $("#nav2").css('display', 'inline-block')
+        navOn = 1;
+        $("#nav2").css({
+            'height': '100vh',
+            'width': '70px',
+            'top': '50%',
+            'transform': 'translate(0, -50%)',
+            'border-radius': '0'
+        })
+        $("#nav2").css({
+            'left': '0%'
+        })
+        $('#chevron2').css({
+            'right': '',
+            'left': '53px',
+            'transform': 'scaleX(-1)'
+        });
+        $('.bar2, .bar1').css({
+            'text-align': 'left',
+            'float': 'left',
+            'margin-left': '15px'
+        });
+        barPostion = 'left';
         $('main').css({
             'bottom': '',
             'top': '0',
@@ -167,6 +140,30 @@ function navSet(valor) {
             'transform': ''
         });
     } else if (valor == 3) {
+        $("#nav2").css('display', 'inline-block')
+        navOn = 1;
+        $("#nav2").css({
+            'height': '70vh',
+            'width': '70px',
+            'top': '50%',
+            'transform': 'translate(0, -50%)',
+            'border-radius': '15px'
+        })
+        $("#nav2").css({
+            'left': '',
+            'right': '7%'
+        })
+        $('#chevron2').css({
+            'left': '',
+            'right': '53px',
+            'transform': 'scaleX(1)'
+        });
+        $('.bar2, .bar1').css({
+            'text-align': 'right',
+            'float': 'right',
+            'margin-right': '15px'
+        });
+        barPostion = 'right';
         $('main').css({
             'bottom': '',
             'top': '50%',
@@ -174,10 +171,34 @@ function navSet(valor) {
             'width': '87%',
             'height': '88vh',
             'left': '0%',
-            'right': '0px',
+            'right': '12%',
             'transform': 'translate(0, -50%)'
         });
     } else if (valor == 4) {
+        $("#nav2").css('display', 'inline-block')
+        navOn = 1;
+        $("#nav2").css({
+            'height': '100vh',
+            'width': '70px',
+            'top': '50%',
+            'transform': 'translate(0, -50%)',
+            'border-radius': '0'
+        })
+        $("#nav2").css({
+            'left': '',
+            'right': '0%'
+        })
+        $('#chevron2').css({
+            'left': '',
+            'right': '53px',
+            'transform': 'scaleX(1)'
+        });
+        $('.bar2, .bar1').css({
+            'text-align': 'right',
+            'float': 'right',
+            'margin-right': '15px'
+        });
+        barPostion = 'right';
         $('main').css({
             'bottom': '',
             'top': '0',
@@ -189,28 +210,47 @@ function navSet(valor) {
             'transform': ''
         });
     } else if (valor == 5) {
+        navOn = 0;
         $('main').css({
-            'bottom': '',
-            'top': '50%',
+            'bottom': '0',
+            'top': '21%',
             'margin': 'auto',
-            'width': '87%',
-            'height': '79vh',
-            'left': '0%',
-            'right': '0px',
-            'transform': 'translate(0, -50%)'
+            'width': '99%',
+            'height': '78vh',
+            'left': '0',
+            'right': '0',
+            'transform': ''
         });
+        $("#nav").css({
+            'top': $("#nav3 div:nth-child(" + valor + ")").offset().top + 'px',
+            'left': '50%',
+            'right': '50%',
+            'width': '70%',
+            'transform': 'translate(-50%, 0%)',
+            'border-radius': '15px'
+        })
     } else if (valor == 6) {
+        navOn = 0;
         $('main').css({
-            'bottom': '',
-            'top': '50%',
+            'top': '0',
+            'bottom': '21%',
             'margin': 'auto',
-            'width': '87%',
-            'height': '79vh',
-            'left': '0%',
-            'right': '0px',
-            'transform': 'translate(0, -50%)'
+            'width': '99%',
+            'height': '78vh',
+            'left': '0',
+            'right': '0',
+            'transform': ''
         });
+        $("#nav").css({
+            'top': $("#nav3 div:nth-child(" + valor + ")").offset().top + 'px',
+            'left': '50%',
+            'right': '50%',
+            'width': '70%',
+            'transform': 'translate(-50%, 0%)',
+            'border-radius': '15px'
+        })
     } else if (valor == 7) {
+        navOn = 0;
         $('main').css({
             'bottom': '',
             'top': '70px',
@@ -221,9 +261,18 @@ function navSet(valor) {
             'right': '0',
             'transform': ''
         });
+        $("#nav").css({
+            'top': $("#nav3 div:nth-child(" + valor + ")").offset().top + 'px',
+            'left': '50%',
+            'right': '50%',
+            'width': '99.7%',
+            'transform': 'translate(-50%, 0%)',
+            'border-radius': '0'
+        })
     } else if (valor == 8) {
+        navOn = 0;
         $('main').css({
-            'top': '0',
+            'top': '',
             'bottom': '70px',
             'margin': 'auto',
             'width': '99%',
@@ -232,7 +281,16 @@ function navSet(valor) {
             'right': '0',
             'transform': ''
         });
+        $("#nav").css({
+            'top': $("#nav3 div:nth-child(" + valor + ")").offset().top + 'px',
+            'left': '50%',
+            'right': '50%',
+            'width': '99.7%',
+            'transform': 'translate(-50%, 0%)',
+            'border-radius': '0'
+        })
     }
+    console.log(valor)
 }
 var barPostion = 'left';
 $(window).on('mouseup', function (e) {
@@ -263,11 +321,15 @@ function chevronBar() {
             'margin-' + barPostion, '35px'
         );
         if (setBar == 1) {
+            $(".grid1").css('padding', '10%')
+            console.log('teste 1')
             $('main').animate({
-                'left': '12%'
+                'left': '29%'
             }, 300);
+            $('main').css({
+                'width': '70%'
+            });
         } else if (setBar == 2) {
-
             $('main').css({
                 'width': '77%'
             });
@@ -275,8 +337,12 @@ function chevronBar() {
                 'left': '250px'
             }, 300);
         } else if (setBar == 3) {
+            $(".grid1").css('padding', '10%')
             $('main').css({
-                'right': '12%'
+                'width': '70%'
+            });
+            $('main').animate({
+                'right': '29%'
             }, 300);
         } else if (setBar == 4) {
             $('main').animate({
@@ -307,7 +373,7 @@ function chevronBar() {
         nav2 = false;
         setTimeout(() => {
             $("#chevron2").css(
-                barPostion, '62px'
+                barPostion, '45px'
             );
             $("#chevron2 i").css({
                 'transform': 'scaleX(1)'
@@ -327,9 +393,13 @@ function chevronBar() {
                 );
             }, 500);
             if (setBar == 1) {
+                $(".grid1").css('padding', '0%')
                 $('main').css({
-                    'left': '0%'
+                    'left': '12%'
                 }, 300);
+                $('main').css({
+                    'width': '87%'
+                });
             } else if (setBar == 2) {
                 $('main').css({
                     'left': '70px'
@@ -338,8 +408,12 @@ function chevronBar() {
                     'width': '93%'
                 });
             } else if (setBar == 3) {
+                $(".grid1").css('padding', '0%')
                 $('main').css({
-                    'right': '0%'
+                    'width': '87%'
+                });
+                $('main').css({
+                    'right': '12%'
                 }, 300);
             } else if (setBar == 4) {
                 $('main').css({
