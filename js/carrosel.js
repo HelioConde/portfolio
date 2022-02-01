@@ -16,6 +16,7 @@ function timer() {
     }
 }
 
+countDown();
 
 function countDown() {
     if (blur == true) {
