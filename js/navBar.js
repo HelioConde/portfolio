@@ -1,10 +1,10 @@
 let nav2 = false;
 let bar = 'null';
 $('main').css({
-    'top': '70px',
+    'top': '1%',
     'margin': 'auto',
     'width': '99%',
-    'height': '88vh',
+    'height': '98vh',
     'left': '0',
     'right': '0'
 });
@@ -213,12 +213,12 @@ function navSet(valor) {
         navOn = 0;
         $('main').css({
             'bottom': '0',
-            'top': '21%',
+            'top': '10%',
             'margin': 'auto',
             'width': '99%',
-            'height': '78vh',
-            'left': '0',
-            'right': '0',
+            'height': '88vh',
+            'left': '0%',
+            'right': '0%',
             'transform': ''
         });
         $("#nav").css({
@@ -233,10 +233,10 @@ function navSet(valor) {
         navOn = 0;
         $('main').css({
             'top': '0',
-            'bottom': '21%',
+            'bottom': '9%',
             'margin': 'auto',
             'width': '99%',
-            'height': '78vh',
+            'height': '88vh',
             'left': '0',
             'right': '0',
             'transform': ''
@@ -253,10 +253,10 @@ function navSet(valor) {
         navOn = 0;
         $('main').css({
             'bottom': '',
-            'top': '70px',
+            'top': '1%',
             'margin': 'auto',
             'width': '99%',
-            'height': '88vh',
+            'height': '98vh',
             'left': '0',
             'right': '0',
             'transform': ''
@@ -273,10 +273,10 @@ function navSet(valor) {
         navOn = 0;
         $('main').css({
             'top': '',
-            'bottom': '70px',
+            'bottom': '1%',
             'margin': 'auto',
             'width': '99%',
-            'height': '88vh',
+            'height': '98vh',
             'left': '0',
             'right': '0',
             'transform': ''

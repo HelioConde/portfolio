@@ -12,7 +12,7 @@
 </head>
 
 <body>
-
+    <div id="background"></div>
     <nav id="nav" class="container">
         <div id="barHover">
             <div class="logo float_l">
@@ -22,16 +22,16 @@
         <div class="barMobile">
             <ul>
                 <li>
-                    <span onmouseup="nav('home')">Início</span>
+                    <span onmouseup="navSend('home')">Início</span>
                 </li>
                 <li>
-                    <span onmouseup="nav('acesso')">Sobre</span>
+                    <span onmouseup="navSend('sobre')">Sobre</span>
                 </li>
                 <li>
-                    <span onmouseup="nav('contato')">Projetos</span>
+                    <span onmouseup="navSend('projetos')">Projetos</span>
                 </li>
                 <li>
-                    <span onmouseup="nav('sobre')">Contato</span>
+                    <span onmouseup="navSend('contato')">Contato</span>
                 </li>
             </ul>
         </div>
@@ -44,8 +44,8 @@
             <ul>
                 <li>
                     <div class="bar2">
-                        <span onmouseup="nav('home')">
-                            <img src="./img/logo.png" alt="Perimetro Segurança eletronica Logo">
+                        <span onmouseup="navSend(0)">
+                            <img src="./img/logo.png" alt="HelioConde logo9">
                         </span>
                     </div>
                     <div class="bar1">
@@ -54,7 +54,7 @@
                 </li>
                 <li>
                     <div class="bar2">
-                        <span onmouseup="nav('home')"><i class="home_solid"></i></span>
+                        <span onmouseup="navSend('home')"><i class="home_solid"></i></span>
                     </div>
                     <div class="bar1">
                         Início
@@ -62,7 +62,7 @@
                 </li>
                 <li>
                     <div class="bar2">
-                        <span onmouseup="nav('home')"><i class="home_solid"></i></span>
+                        <span onmouseup="navSend('sobre')"><i class="home_solid"></i></span>
                     </div>
                     <div class="bar1">
                         Sobre
@@ -70,7 +70,7 @@
                 </li>
                 <li>
                     <div class="bar2">
-                        <span onmouseup="nav('home')"><i class="home_solid"></i></span>
+                        <span onmouseup="navSend('projetos')"><i class="home_solid"></i></span>
                     </div>
                     <div class="bar1">
                         Projetos
@@ -78,7 +78,7 @@
                 </li>
                 <li>
                     <div class="bar2">
-                        <span onmouseup="nav('home')"><i class="home_solid"></i></span>
+                        <span onmouseup="navSend('contato')"><i class="home_solid"></i></span>
                     </div>
                     <div class="bar1">
                         Contato
@@ -104,22 +104,19 @@
         <div></div>
     </nav>
     <main>
+        <div id="barLeft">
+            <i class="angle_right"></i>
+        </div>
         <div id="home">
-            <div id="barLeft">
-                <i class="angle_right"></i>
-            </div>
             <div class="page1 grid1">
-
-                    <div>Hélio Conde</div>
-                    <div>Front-End Developer</div>
-
+                <div>Hélio Conde</div>
+                <div>Front-End Developer</div>
                 <div>
                     <div><img src="img/helioConde.png" class="page1Img" alt=""></div>
                 </div>
 
                 <div>Vamos trabalhar juntos?</div>
                 <div><button class="button">Projetos</button><button class="button">Contatos</button></div>
-
             </div>
             <div class="logoFront html5">
                 <div>HTML</div>
@@ -148,12 +145,121 @@
                 <span></span>
                 <span></span>
             </div>
-            <div id="barRight">
-                <i class="angle_right"></i>
-            </div>
         </div>
         <div id="sobre">
+            <div>
+                <h1>OLÁ, TUDO BEM CONTIGO?</h1>
+                <br>
+                <h3>
+                    <p>
+                        Meu nome é Francisco Hélio, sou desenvolvedor Front End, com quase 4 anos de experiência.
+                    </p>
+                    <br>
+                    Já trabalhei com a PERIMETRO SEGURANCA ELETRONICA E ARQUITETURA LTDA com um equipamento ligado
+                    direto ao site onde,
+                    <p>recebia informações do mesmo e eu filtrava essas informações e organizada em um banco de
+                        dados
+                    </p>
+                    <p>e ainda garantir uma boa segurança no site.</p>
+                    <br>
+                    <p>Tenho experiência com as linguagens de programação:</p>
+                    <br>
+                    <div class="box2">
+                        <div class="box">
+                            <p># HTML5</p>
+                            <p># CSS3</p>
+                            <p># JAVASCRIPT</p>
+                            <p># JQUERY</p>
+                            <p># AJAX</p>
+                            <p># BOOTSTRAP</p>
+                        </div>
+                        <div class="box">
+                            <p># PHP</p>
+                            <p># MYSQL</p>
+                            <p># NODEJS</p>
+                            <p># ELECTRON</p>
+                            <p># SEO</p>
+                            <p># ReactJS</p>
+                        </div>
+                    </div>
+                </h3>
+            </div>
+        </div>
+        <div id="projetos">
+            <div>
+                <div class="parent">
+                    <div></div>
+                    <a href="https://perimetroseg.com.br/" target="_blank"
+                        title="Site da Perimetro segurança eletronica">
+                        <div class="boxP">
 
+                            <img src="./img/perimetro.png" alt="Perimetro segurança eletronica">
+                            <br>
+                            <br>
+                            <h2>
+                                Perimetro
+                            </h2>
+
+                        </div>
+                    </a>
+                    <a href="https://github.com/HelioConde/" id="invert" target="_blank"
+                        title="Meu GitHub com meus projetos">
+                        <div class="boxP">
+                            <img src="./img/git.png" alt="">
+                            <br>
+                            <br>
+                            <h2>
+                                GitHub
+                            </h2>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/francisco-h%C3%A9lio-371680203/" target="_blank"
+                        title="Meu Linkedin com minhas informações">
+                        <div class="boxP">
+                            <img src="./img/linkedin.png" alt="">
+                            <br>
+                            <br>
+                            <h2>
+                                Linkedin
+                            </h2>
+                        </div>
+                    </a>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contato">
+            <div class="contatoGrid">
+                <a href="https://wa.me/5561984970060" title="Whatsapp" target="_blank">
+                    <div>
+                        <i class="whatsapp_brands"></i>
+                        <div>(61)98497-0060</div>
+                    </div>
+                </a>
+                <a href="mailto:helio.conde.contato@gmail.com" title="E-mail" target="_blank">
+                    <div>
+                        <i class="envelope_open"></i>
+                        <div>helio.conde.contato@gmail.com</div>
+                    </div>
+                </a>
+                <a href="www.linkedin.com/in/helioconde" title="Linkedin" target="_blank">
+                    <div>
+                        <i class="linkedin"></i>
+                        <div>helioconde</div>
+                    </div>
+                </a>
+                <a href="https://github.com/HelioConde" title="GitHub" target="_blank">
+                    <div>
+                        <i class="github"></i>
+                        <div>HelioConde</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div id="barRight">
+            <i class="angle_right"></i>
         </div>
     </main>
 

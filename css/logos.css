@@ -357,7 +357,7 @@
     display: inline-block;
     width: 300px;
     height: 300px;
-    background: black;
+    background: white;
     clip-path: polygon(51% 11%, 47% 25%, 51% 11%, 51% 11%,
             51% 11%,
 
@@ -424,7 +424,7 @@
     display: inline-block;
     width: 300px;
     height: 300px;
-    background: black;
+    background: white;
     clip-path: polygon(57% 11%, 53% 25%, 53% 25%, 53% 25%,
             53% 25%,
 
@@ -439,8 +439,6 @@
 }
 
 @keyframes frontEndAnim2 {
-
-
     0% {
         clip-path: polygon(57% 11%, 53% 25%, 53% 25%, 53% 25%,
                 53% 25%,
@@ -484,4 +482,87 @@
     100% {
         clip-path: polygon(57% 11%, 53% 25%, 69% 25%, 68% 38%, 49% 38%, 46% 52%, 66% 52%, 65% 69%, 51% 73%, 41% 71%, 38% 85%, 50% 89%, 79% 81%, 83% 25%, 85% 11%);
     }
+}
+
+
+
+.chevron_circle {
+    display: inline-block;
+    margin-top: 5px;
+    text-indent: -9999px;
+    width: 30px;
+    height: 30px;
+    background: url(../icon-fontawesome/chevron-circle-left-solid.svg);
+    background-size: 30px 30px;
+    filter: invert(100%);
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.angle_right {
+    display: inline-block;
+    margin-top: 5px;
+    text-indent: -9999px;
+    width: 30px;
+    height: 30px;
+    background: url(../icon-fontawesome/angle-right-solid.svg);
+    background-size: 30px 30px;
+    filter: invert(100%);
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.home_solid {
+    display: inline-block;
+    margin-top: 5px;
+    text-indent: -9999px;
+    width: 30px;
+    height: 30px;
+    background: url(../icon-fontawesome/home-solid.svg);
+    background-size: 30px 30px;
+    filter: invert(100%);
+}
+
+.whatsapp_brands {
+    display: inline-block;
+    margin-top: 5px;
+    text-indent: -9999px;
+    width: 30px;
+    height: 30px;
+    background: url(../icon-fontawesome/whatsapp-brands.svg);
+    background-size: 100% 100%;
+    filter: invert(100%);
+}
+
+.envelope_open {
+    display: inline-block;
+    margin-top: 5px;
+    text-indent: -9999px;
+    width: 30px;
+    height: 30px;
+    background: url(../icon-fontawesome/envelope-open-regular.svg);
+    background-size: 100% 100%;
+    filter: invert(100%);
+}
+
+.linkedin {
+    display: inline-block;
+    margin-top: 5px;
+    text-indent: -9999px;
+    width: 30px;
+    height: 30px;
+    background: url(../icon-fontawesome/linkedin-brands.svg);
+    background-size: 100% 100%;
+    filter: invert(100%);
+}
+
+.github {
+    display: inline-block;
+    margin-top: 5px;
+    text-indent: -9999px;
+    width: 30px;
+    height: 30px;
+    background: url(../icon-fontawesome/github-brands.svg);
+    background-size: 100% 100%;
+    filter: invert(100%);
 }

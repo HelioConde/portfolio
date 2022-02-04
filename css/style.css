@@ -4,7 +4,7 @@
 }
 
 body {
-    background: linear-gradient(black, rgb(2, 4, 30), black);
+    background-image: linear-gradient(to left bottom, black, rgb(2, 4, 30), rgb(2, 4, 30));
     display: block;
     width: 100%;
     height: 100vh;
@@ -16,12 +16,13 @@ body {
 /* ------ */
 
 #nav {
+    position: relative;
     height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 1px 4px 0px white;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.5);
     width: 100%;
     transition: border 0.5s ease;
     transition: width 0.5s ease;
@@ -129,32 +130,6 @@ nav:hover .null_box2 span {
 #nav span {
     display: flex;
     font-weight: bolder;
-}
-
-.chevron_circle {
-    display: inline-block;
-    margin-top: 5px;
-    text-indent: -9999px;
-    width: 30px;
-    height: 30px;
-    background: url(../icon-fontawesome/chevron-circle-left-solid.svg);
-    background-size: 30px 30px;
-    filter: invert(100%);
-    margin-left: 4px;
-    cursor: pointer;
-}
-
-.angle_right {
-    display: inline-block;
-    margin-top: 5px;
-    text-indent: -9999px;
-    width: 30px;
-    height: 30px;
-    background: url(../icon-fontawesome/angle-right-solid.svg);
-    background-size: 30px 30px;
-    filter: invert(100%);
-    margin-left: 4px;
-    cursor: pointer;
 }
 
 #chevron {
@@ -343,17 +318,6 @@ nav:hover .null_box2 span {
     cursor: default;
 }
 
-.home_solid {
-    display: inline-block;
-    margin-top: 5px;
-    text-indent: -9999px;
-    width: 30px;
-    height: 30px;
-    background: url(../icon-fontawesome/home-solid.svg);
-    background-size: 30px 30px;
-    filter: invert(100%);
-}
-
 main {
     display: flex;
     justify-content: space-between;
@@ -367,9 +331,21 @@ main {
     border-radius: 15px;
     position: fixed;
     cursor: default;
-    height: 88vh;
+    height: 98vh;
     z-index: 1;
     text-align: center;
+}
+
+#background {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: url('../img/main.png');
+    background-size: 100% 100vh;
+    opacity: .4;
+    z-index: -777;
 }
 
 #home {
@@ -458,4 +434,147 @@ main {
 #barRight:hover {
     background: rgba(0, 0, 0, 0.5);
     filter: invert(100%)
+}
+
+#sobre, #home, #projetos {
+    display: none;
+}
+
+#sobre {
+    padding: 0 10%;
+}
+
+.box {
+    display: inline-block;
+    width: 45%;
+    text-align: left;
+}
+
+.box p {
+    opacity: 0;
+    margin-left: -100%;
+    transition: all 1s;
+}
+
+.box2 {
+    display: inline-block;
+    width: 50%;
+}
+
+.boxP {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 90%;
+    height: 150px;
+    margin: auto;
+    transition: all 1s;
+}
+
+.boxP:hover {
+    width: 100%;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.parent div:nth-child(1) {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.parent div:nth-child(2) {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.parent div:nth-child(3) {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.parent div:nth-child(4) {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+.parent div:nth-child(5) {
+    grid-area: 1 / 5 / 2 / 6;
+}
+
+#invert {
+    color: black;
+    filter: invert(100%);
+    box-shadow: 0px 0px 10px black;
+}
+
+.boxP img {
+    width: 90%;
+}
+
+
+.parent a {
+    box-shadow: 0px 0px 10px white;
+    text-decoration: none;
+    color: white;
+}
+
+.contatoGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 0 10%;
+    justify-items: center;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Poppins Bold';
+    width: 100vw;
+}
+
+.contatoGrid div:nth-child(1) {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.contatoGrid div:nth-child(2) {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.contatoGrid div:nth-child(3) {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.contatoGrid div:nth-child(4) {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+.contatoGrid div {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+}
+
+.contatoGrid div i {
+    width: 100%;
+    height: 10vh;
+}
+
+.contatoGrid a {
+    text-decoration: none;
+    color: white;
+}
+
+.contatoGrid div div {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.contatoGrid div:hover div {
+    opacity: 1;
+}
+
+.contatoGrid div:hover i {
+    opacity: 1;
 }
