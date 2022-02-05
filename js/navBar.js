@@ -1,13 +1,15 @@
 let nav2 = false;
 let bar = 'null';
-$('main').css({
-    'top': '1%',
-    'margin': 'auto',
-    'width': '99%',
-    'height': '98vh',
-    'left': '0',
-    'right': '0'
-});
+if ($(window).width() > '600') {
+    $('main').css({
+        'top': '1%',
+        'margin': 'auto',
+        'width': '99%',
+        'height': '98vh',
+        'left': '0',
+        'right': '0'
+    });
+}
 let navOn = 0;
 function setPos(e) {
     $("#nav3 div").css({
@@ -432,3 +434,17 @@ function chevronBar() {
         $(".bar1").fadeOut(500)
     }
 }
+
+// Mobile //
+
+var mobileBar = false;
+
+$("#barHover").on('mouseup', function () {
+    if (mobileBar == false) {
+        $(".barMobile").show(1000);
+        mobileBar = true;
+    } else {
+        $(".barMobile").hide(1000);
+        mobileBar = false;
+    }
+})

@@ -512,6 +512,17 @@
     cursor: pointer;
 }
 
+.bars {
+    display: inline-block;
+    margin-top: 5px;
+    text-indent: -9999px;
+    width: 30px;
+    height: 30px;
+    background: url(../icon-fontawesome/bars-solid.svg);
+    background-size: 100% 100%;
+    filter: invert(100%);
+}
+
 .home_solid {
     display: inline-block;
     margin-top: 5px;

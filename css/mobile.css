@@ -1,0 +1,106 @@
+@media only screen and (max-width: 600px) {
+    #nav {
+        display: block;
+        height: auto;
+    }
+
+    #nav div {
+        justify-content: center;
+    }
+
+    #nav div ul {
+        display: block;
+    }
+
+    #nav div ul li {
+        display: block;
+        text-align: center;
+    }
+
+    main {
+        position: relative;
+        height: 89vh;
+    }
+
+    .barMobile {
+        display: none;
+    }
+
+    .bars {
+        display: inline-block;
+    }
+
+    .mobileBar {
+        border: 2px solid white;
+        padding: 0 4px;
+        margin: 0 12px;
+    }
+
+    .null_box {
+        display: none;
+    }
+
+    .grid1 {
+        display: block;
+    }
+
+    #nav span {
+        display: block;
+    }
+
+    .box2 {
+        width: 100%;
+    }
+
+    .box {
+        width: 48%;
+    }
+
+    .parent {
+        display: block;
+    }
+
+    .boxP {
+        box-shadow: 0px 0px 10px white;
+        text-decoration: none;
+        color: white;
+        height: auto;
+        width: 75%;
+        padding: 5% 0;
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    #invert {
+        box-shadow: none;
+    }
+
+    .contatoGrid {
+        display: block;
+        padding: 0;
+        width: 70vw;
+    }
+
+    .contatoGrid a {
+        display: block;
+        margin: 10%;
+    }
+
+    #sobre, #projetos, #contato {
+        color: white;
+        border-radius: 15px;
+        cursor: default;
+        z-index: 1;
+        text-align: center;
+        margin: auto;
+        align-items: center;
+        padding: 15%;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 16px;
+    }
+}
