@@ -534,6 +534,39 @@
     filter: invert(100%);
 }
 
+.address_book {
+    display: inline-block;
+    margin-top: 5px;
+    text-indent: -9999px;
+    width: 30px;
+    height: 30px;
+    background: url(../icon-fontawesome/address-book-regular.svg);
+    background-size: 30px 30px;
+    filter: invert(100%);
+}
+
+.briefcase_solid {
+    display: inline-block;
+    margin-top: 5px;
+    text-indent: -9999px;
+    width: 30px;
+    height: 30px;
+    background: url(../icon-fontawesome/briefcase-solid.svg);
+    background-size: 30px 30px;
+    filter: invert(100%);
+}
+
+.address_card {
+    display: inline-block;
+    margin-top: 5px;
+    text-indent: -9999px;
+    width: 30px;
+    height: 30px;
+    background: url(../icon-fontawesome/address-card-solid.svg);
+    background-size: 30px 30px;
+    filter: invert(100%);
+}
+
 .whatsapp_brands {
     display: inline-block;
     margin-top: 5px;

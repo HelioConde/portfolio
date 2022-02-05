@@ -69,6 +69,7 @@ function navSend(valor) {
             $("#background").animate({
                 'opacity': "0"
             }, 2000)
+            $("#background2").fadeOut(1000);
 
             animBlock = true;
             setTimeout(() => {
@@ -93,12 +94,12 @@ function navSend(valor) {
                 } else if (namePage == 'sobre') {
                     if ($(window).width() > '600') {
                         $("#background").css({
-                            'background': "url('./img/circuitos.png')",
+                            'background': "url('./img/circuitos.jpg')",
                             'background-size': '100% 100vh'
                         })
                     } else {
                         $("#background").css({
-                            'background': "url('./img/circuitos.png')",
+                            'background': "url('./img/circuitos.jpg')",
                             'background-size': 'auto 100vh'
                         })
                     }
@@ -122,6 +123,19 @@ function navSend(valor) {
                     $("#background").animate({
                         'opacity': "1"
                     }, 2000)
+                } else if (namePage == 'contato') {
+
+                    if ($(window).width() > '600') {
+                        $("#background2").fadeIn(1000)
+                    } else {
+                        $("#background2").css({
+                            'width': '1380px',
+                            'height': '720px'
+                        })
+                        $("#background2").fadeIn(1000)
+
+                    }
+
                 }
                 setTimeout(() => {
                     animBlock = false;
