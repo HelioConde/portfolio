@@ -438,13 +438,14 @@ function chevronBar() {
 // Mobile //
 
 var mobileBar = false;
-
-$("#barHover").on('mouseup', function () {
-    if (mobileBar == false) {
-        $(".barMobile").show(1000);
-        mobileBar = true;
-    } else {
-        $(".barMobile").hide(1000);
-        mobileBar = false;
-    }
-})
+if ($(window).width() < '600') {
+    $("#barHover").on('mouseup', function () {
+        if (mobileBar == false) {
+            $(".barMobile").show(1000);
+            mobileBar = true;
+        } else {
+            $(".barMobile").hide(1000);
+            mobileBar = false;
+        }
+    })
+}

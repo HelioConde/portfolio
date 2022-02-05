@@ -71,7 +71,7 @@
     }
 
     #invert {
-        box-shadow: none;
+        box-shadow: 0;
     }
 
     .contatoGrid {
