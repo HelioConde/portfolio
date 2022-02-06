@@ -1,15 +1,6 @@
 let nav2 = false;
 let bar = 'null';
-if ($(window).width() > '600') {
-    $('main').css({
-        'top': '1%',
-        'margin': 'auto',
-        'width': '99%',
-        'height': '98vh',
-        'left': '0',
-        'right': '0'
-    });
-}
+
 let navOn = 0;
 function setPos(e) {
     $("#nav3 div").css({
@@ -83,7 +74,7 @@ function navSet(valor) {
             'border-radius': '15px'
         })
         $("#nav2").css({
-            'left': '7%'
+            'left': '5%'
         })
         $('#chevron2').css({
             'right': '',
@@ -100,10 +91,10 @@ function navSet(valor) {
         $('main').css({
             'bottom': '',
             'top': '50%',
-            'margin': 'auto',
-            'width': '87%',
+            'margin': '',
+            'width': '89%',
             'height': '88vh',
-            'left': '12%',
+            'left': '10%',
             'right': '0px',
             'transform': 'translate(0, -50%)'
         });
@@ -135,7 +126,7 @@ function navSet(valor) {
             'bottom': '',
             'top': '0',
             'margin': '',
-            'width': '93%',
+            'width': '95%',
             'height': '99vh',
             'left': '70px',
             'right': '0px',
@@ -153,7 +144,7 @@ function navSet(valor) {
         })
         $("#nav2").css({
             'left': '',
-            'right': '7%'
+            'right': '5%'
         })
         $('#chevron2').css({
             'left': '',
@@ -169,11 +160,11 @@ function navSet(valor) {
         $('main').css({
             'bottom': '',
             'top': '50%',
-            'margin': 'auto',
-            'width': '87%',
+            'margin': '',
+            'width': '89%',
             'height': '88vh',
-            'left': '0%',
-            'right': '12%',
+            'left': 'auto',
+            'right': '10%',
             'transform': 'translate(0, -50%)'
         });
     } else if (valor == 4) {
@@ -205,10 +196,10 @@ function navSet(valor) {
             'bottom': '',
             'top': '0',
             'margin': '',
-            'width': '93%',
+            'width': '95%',
             'height': '99vh',
-            'right': '70px',
-            'left': '0px',
+            'right': '5%',
+            'left': 'auto',
             'transform': ''
         });
     } else if (valor == 5) {
@@ -306,7 +297,7 @@ $(window).on('mouseup', function (e) {
 $("#chevron2").on('mouseup', function () {
     chevronBar();
 })
-
+// controla a animação da barra de navegação e da pagina main //
 function chevronBar() {
     if (nav2 == false) {
         $("#chevron2").css(
@@ -326,33 +317,36 @@ function chevronBar() {
             $(".grid1").css('padding', '10%')
             console.log('teste 1')
             $('main').animate({
-                'left': '29%'
+                'left': '10%'
             }, 300);
             $('main').css({
-                'width': '70%'
+                'width': '89%'
             });
         } else if (setBar == 2) {
             $('main').css({
-                'width': '77%'
+                'width': '82%'
             });
             $('main').animate({
-                'left': '250px'
+                'left': '18%'
             }, 300);
         } else if (setBar == 3) {
             $(".grid1").css('padding', '10%')
             $('main').css({
-                'width': '70%'
+                'width': '89%'
             });
             $('main').animate({
-                'right': '29%'
+                'right': '10%'
             }, 300);
         } else if (setBar == 4) {
             $('main').animate({
-                'right': '250px'
+                'right': '18%'
             }, 300);
-            $('main').css({
-                'width': '77%'
-            });
+            setTimeout(() => {
+                $('main').css({
+                    'width': '82%'
+                });
+            }, 300);
+
         }
 
 
@@ -397,32 +391,32 @@ function chevronBar() {
             if (setBar == 1) {
                 $(".grid1").css('padding', '0%')
                 $('main').css({
-                    'left': '12%'
+                    'left': '10%'
                 }, 300);
                 $('main').css({
-                    'width': '87%'
+                    'width': '89%'
                 });
             } else if (setBar == 2) {
                 $('main').css({
                     'left': '70px'
                 }, 300);
                 $('main').css({
-                    'width': '93%'
+                    'width': '95%'
                 });
             } else if (setBar == 3) {
                 $(".grid1").css('padding', '0%')
                 $('main').css({
-                    'width': '87%'
+                    'width': '89%'
                 });
                 $('main').css({
-                    'right': '12%'
+                    'right': '10%'
                 }, 300);
             } else if (setBar == 4) {
                 $('main').css({
-                    'right': '70px'
+                    'right': '5%'
                 }, 300);
                 $('main').css({
-                    'width': '93%'
+                    'width': '95%'
                 });
             }
         }, 500);
@@ -436,16 +430,25 @@ function chevronBar() {
 }
 
 // Mobile //
-
 var mobileBar = false;
-if ($(window).width() < '600') {
-    $("#barHover").on('mouseup', function () {
-        if (mobileBar == false) {
-            $(".barMobile").show(1000);
-            mobileBar = true;
-        } else {
-            $(".barMobile").hide(1000);
-            mobileBar = false;
-        }
-    })
+$("#barHover").on('mouseup', function () {
+    if ($(window).width() < '600') {
+        showMobileBar(mobileBar);
+    }
+})
+function showMobileBar(valor) {
+    if (valor == false) {
+        $(".barActive").show(1000);
+        mobileBar = true;
+    } else {
+        $(".barActive").hide(1000);
+        mobileBar = false;
+    }
 }
+
+$(window).on('mousemove', function () {
+    if ($(window).width() > '600') {
+        $(".barActive").css('display', 'flex');
+        mobileBar = true;
+    }
+})

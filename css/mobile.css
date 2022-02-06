@@ -18,12 +18,17 @@
     }
 
     main {
-        position: relative;
-        height: 89vh;
+        top: auto;
+        margin: auto;
+        width: auto;
+        height: auto;
+        left: auto;
+        right: auto;
     }
 
-    .barMobile {
-        display: none;
+    main {
+        position: relative;
+        height: 89vh;
     }
 
     .bars {
@@ -104,5 +109,8 @@
 
     h1 {
         font-size: 16px;
+    }
+    .barActive {
+        display: none;
     }
 }

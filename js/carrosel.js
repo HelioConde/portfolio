@@ -22,6 +22,7 @@ var navPage = 0;
 var namePage = 'home';
 var animBlock = false;
 
+// click para trocar de pagina //
 $("#barLeft").on('mouseup', function () {
     if (animBlock == false) {
         if (namePage == 'home') {
@@ -52,7 +53,11 @@ $("#barRight").on('mouseup', function () {
     }
 })
 
+// deixa as paginas visivel e controla o background //
 function navSend(valor) {
+    if ($(window).width() < '600') {
+        showMobileBar(true);
+    }
     if (animBlock == false) {
         namePage = valor;
         $("#home").css({ display: 'none' });
@@ -69,8 +74,15 @@ function navSend(valor) {
             $("#background").animate({
                 'opacity': "0"
             }, 2000)
+            $("#background3").fadeOut(1000);
             $("#background2").fadeOut(1000);
-
+            setTimeout(() => {
+                $('.background').attr('id', '');
+                $(".background div").css({ 'left': '' })
+            }, 1000);
+            for (var i = 1; i < 5; i++) {
+                $("#nav div ul li:nth-child(" + i + ") span").css({ 'border-bottom': '' });
+            }
             animBlock = true;
             setTimeout(() => {
                 localStorage.setItem('page', namePage);
@@ -87,44 +99,45 @@ function navSend(valor) {
                             'background-size': 'auto 100vh'
                         })
                     }
+                    $("#nav div ul li:nth-child(1) span").css({ 'border-bottom': '2px solid white' });
                     $("#background").animate({
                         'opacity': "1"
                     })
                     countDown();
                 } else if (namePage == 'sobre') {
+                    $('.background').attr('id', 'background4');
                     if ($(window).width() > '600') {
-                        $("#background").css({
-                            'background': "url('./img/circuitos.jpg')",
-                            'background-size': '100% 100vh'
-                        })
+                        $("#background4").fadeIn(1000)
                     } else {
-                        $("#background").css({
-                            'background': "url('./img/circuitos.jpg')",
-                            'background-size': 'auto 100vh'
+                        $("#background4").css({
+                            'width': '1380px',
+                            'height': '720px'
                         })
+                        $("#background4").fadeIn(1000)
                     }
+                    $("#nav div ul li:nth-child(2) span").css({ 'border-bottom': '2px solid white' });
                     $("#background").animate({
                         'opacity': "1"
                     }, 2000)
                     loop(true);
                 } else if (namePage == 'projetos') {
-
+                    $('.background').attr('id', 'background3');
                     if ($(window).width() > '600') {
-                        $("#background").css({
-                            'background': "url('./img/main.png')",
-                            'background-size': '100% 100vh'
-                        })
+                        $("#background3").fadeIn(1000)
                     } else {
-                        $("#background").css({
-                            'background': "url('./img/main.png')",
-                            'background-size': 'auto 100vh'
+                        $("#background3").css({
+                            'width': '1380px',
+                            'height': '720px'
                         })
+                        $("#background3").fadeIn(1000)
                     }
+                    $("#nav div ul li:nth-child(3) span").css({ 'border-bottom': '2px solid white' });
                     $("#background").animate({
                         'opacity': "1"
                     }, 2000)
                 } else if (namePage == 'contato') {
-
+                    $('.background').attr('id', 'background2');
+                    $("#nav div ul li:nth-child(4) span").css({ 'border-bottom': '2px solid white' });
                     if ($(window).width() > '600') {
                         $("#background2").fadeIn(1000)
                     } else {
@@ -144,6 +157,8 @@ function navSend(valor) {
         }
     }
 }
+
+// loop de animação //
 var looping = '1';
 function loop(valor) {
     if (valor == true) {
@@ -179,6 +194,7 @@ if (localStorage.getItem('page') == null) {
     navSend(localStorage.getItem('page'));
 }
 
+// controla a animação carrosel grid //
 function countDown() {
     if (navPage == 0) {
         if (blur == true) {
@@ -217,6 +233,7 @@ function countDown() {
     }
 }
 
+// limpa o carrosel //
 function clear() {
     $(".grid1").fadeOut(2000);
     $(".grid1").animate({ opacity: '0' }, 2000);
