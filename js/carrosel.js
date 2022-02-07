@@ -4,7 +4,8 @@ var blur = true;
 ms = 30; // 1000 ?
 num = 1;
 start = new Date();
-log = 6000;
+log = 4000;
+var contagem = 4000;
 
 // Timer loop functuin //
 
@@ -13,7 +14,7 @@ function timer() {
     if (num < log) {
         window.setTimeout(timer, ms);
     } else {
-        log = log + 6000;
+        log = log + contagem;
         countDown();
     }
 }
@@ -221,13 +222,21 @@ function countDown() {
                 $(".frontEnd").fadeIn(2000);
                 count = 0;
             }
+            $("#contador span").css({
+                'transition': 'width 4s',
+                'width': '100%'
+            })
             start2 = new Date();
-            dueTo = new Date(+new Date() + 6000);
+            dueTo = new Date(+new Date() + contagem);
             ms2 = 30; // 1000 ?
             num2 = 1;
             timer();
             setTimeout(() => {
-                clear();
+                $("#contador span").css({
+                    'transition': 'width 0s',
+                    'width': '0%'
+                })
+                clear2();
             }, 4000);
         }
     }
@@ -250,4 +259,5 @@ function clear2() {
     $(".css").fadeOut(0);
     $(".javaScript").fadeOut(0);
     $(".frontEnd").fadeOut(0);
+    blur = true;
 }
