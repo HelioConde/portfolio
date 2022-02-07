@@ -27,8 +27,8 @@
     }
 
     main {
+        min-height: 90vh;
         position: relative;
-        height: 89vh;
     }
 
     .bars {
@@ -110,7 +110,19 @@
     h1 {
         font-size: 16px;
     }
+
     .barActive {
         display: none;
+    }
+
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-size: auto 100vh;
+    }
+
+    #contador {
+        bottom: 2%;
     }
 }
