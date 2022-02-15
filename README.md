@@ -16,5 +16,5 @@ linguagens de programação
 # NODEJS
 # ELECTRON
 # SEO
-# ReactJS
+# Angular
 ```
