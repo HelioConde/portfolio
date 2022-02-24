@@ -1,6 +1,4 @@
-## Olá, Bem vindo ao meu Portfolio
-
-Aqui você verar meu desenvolvimento como Front-End
+## Olá, Esse é meu portfolio mostrando minhas habilidades no "Front End
 
 ```markdown
 linguagens de programação
