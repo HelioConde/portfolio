@@ -1,0 +1,45 @@
+name: Portfólio histórico — Web Design e Playwright QA
+on:
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "css/arquivo-modern.css"
+      - "js/arquivo-modern.js"
+      - "tests/**"
+      - ".github/workflows/visual-qa.yml"
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: portfolio-visual-qa-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verificar JavaScript e arquivos
+        run: |
+          node --check js/arquivo-modern.js
+          node --check tests/visual-qa.cjs
+          test -f img/helioConde.png
+          test -f index.html
+      - name: Instalar Playwright
+        run: |
+          npm install --prefix /tmp/portfolio-playwright --no-save --package-lock=false playwright@1.56.1
+          /tmp/portfolio-playwright/node_modules/.bin/playwright install --with-deps chromium
+      - name: Executar auditoria e capturar telas
+        run: NODE_PATH=/tmp/portfolio-playwright/node_modules node tests/visual-qa.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: portfolio-historico-screenshots
+          path: screenshots/
+          if-no-files-found: ignore
